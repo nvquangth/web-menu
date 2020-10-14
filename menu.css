@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu, .submenu {
+    width: 150px;
+    list-style-type: none;
+}
+
+.menu__item, .submenu__item {
+    background-color: #78b43d;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+.menu__item:hover, .submenu__item:hover {
+    background-color: #aad862;
+    cursor: pointer;
+}
+
+.menu > .menu__item > .submenu {
+    position: absolute;
+    left: 150px;
+    display: none;
+}
+
+.menu > .menu__item:hover > .submenu {
+    z-index: 100;
+}
