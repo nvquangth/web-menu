@@ -3,28 +3,48 @@
     padding: 0;
 }
 
-.menu, .submenu {
+.menu, .submenu, .submenu2 {
     width: 150px;
     list-style-type: none;
 }
 
-.menu__item, .submenu__item {
+.menu__item, .submenu__item, .submenu2__item {
     background-color: #78b43d;
     text-align: left;
     padding: 10px 15px;
 }
 
-.menu__item:hover, .submenu__item:hover {
+.menu__item:hover, .submenu__item:hover, .submenu2__item:hover {
     background-color: #aad862;
     cursor: pointer;
 }
 
-.menu > .menu__item > .submenu {
+.menu .menu__item .submenu {
+    display: none;
     position: absolute;
     left: 150px;
-    display: none;
+    top: 0;
 }
 
-.menu > .menu__item:hover > .submenu {
-    z-index: 100;
+.menu .menu__item {
+    position: relative;
+}
+
+.menu  .menu__item:hover .submenu {
+    display: inline-block;
+}
+
+.menu .menu__item .submenu .submenu__item .submenu2 {
+    display: none;
+    position: absolute;
+    left: 150px;
+    top: 0;
+}
+
+.menu .menu__item .submenu .submenu__item{
+    position: relative;
+}
+
+.menu  .menu__item .submenu .submenu__item:hover .submenu2{
+    display: inline-block;
 }
